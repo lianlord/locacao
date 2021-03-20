@@ -15,17 +15,17 @@ namespace Interfaces
 
         private static void MockLocation()
         {
-            Vehicle vehicle = new Vehicle("Vectra");
-            CarRental carRental = new CarRental(DateTime.Now, DateTime.Now.AddHours(4.1), vehicle);
-            RentalService rentalService = new RentalService(10, 130, new BrasilTaxService());
+            Vehicle vehicle = new("Vectra");
+            CarRental carRental = new(DateTime.Now, DateTime.Now.AddHours(4.1), vehicle);
+            RentalService rentalService = new(10, 130, new BrasilTaxService());
             rentalService.ProcessInvoice(carRental);
             Console.WriteLine("Invoice:\n"+carRental.Invoice);
 
             Vehicle vehicle2 = new Vehicle("Vectra");
-            CarRental carRental2 = new CarRental(
+            CarRental carRental2 = new(
                 new DateTime(2018, 06, 25, 10, 30, 00),
-                new DateTime(2018, 06, 27, 11, 40, 00), vehicle);
-            RentalService rentalService2 = new RentalService(10, 130, new BrasilTaxService());
+                new DateTime(2018, 06, 27, 11, 40, 00), vehicle2);
+            RentalService rentalService2 = new(10, 130, new BrasilTaxService());
             rentalService2.ProcessInvoice(carRental2);
             Console.WriteLine("Invoice:\n"+carRental2.Invoice);
 
