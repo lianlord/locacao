@@ -1,4 +1,4 @@
-﻿using Interfaces.Entityes;
+﻿using Interfaces.Entities;
 using Interfaces.Services;
 using System;
 

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Interfaces.Entityes
+namespace Interfaces.Entities
 {
     class Invoice
     {
